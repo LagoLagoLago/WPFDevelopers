@@ -54,6 +54,7 @@ namespace WPFDevelopers.Controls
         public override void OnApplyTemplate()
         {
             base.OnApplyTemplate();
+            
             _dragDrop = GetTemplateChild(DragDropTemplateName) as DragDrop;
             _rectangle = GetTemplateChild(RectangleTemplateName) as Rectangle;
             _dragDrop.UpdateImageEvent += DragDropItem_UpdateImageEvent;
@@ -85,7 +86,6 @@ namespace WPFDevelopers.Controls
             cutCustoms.Width = cutCustoms.ActualWidth;
             cutCustoms.Height = cutCustoms.ActualHeight;
             cutCustoms._dragDrop.Visibility = Visibility.Visible;
-
         }
     }
 }
